@@ -1,0 +1,11 @@
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f8fb;color:#111}
+.container{max-width:760px;margin:36px auto;background:#fff;padding:22px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+h1{text-align:center;margin:0 0 12px}
+.quote-box{text-align:center;margin-bottom:16px}
+#quote{font-size:1.05rem;padding:8px;color:#333}
+button{background:#2563eb;color:#fff;padding:8px 12px;border:0;border-radius:8px;cursor:pointer}
+.note-controls{display:flex;gap:8px;margin-bottom:12px}
+#note-input{flex:1;padding:8px;border-radius:8px;border:1px solid #ddd}
+#notes-list{list-style:none;padding:0;margin:0}
+.note{display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:8px;border:1px solid #eef2ff;margin-bottom:8px}
+.small-btn{background:#fff;color:#111;border:1px solid #e6e9ee;padding:6px 8px;border-radius:6px;cursor:pointer}

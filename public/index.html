@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>QuickNote Pro</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <main class="container">
+    <h1>QuickNote Pro</h1>
+
+    <section class="quote-box">
+      <p id="quote">Loading motivational quote...</p>
+      <button id="new-quote">New Quote</button>
+    </section>
+
+    <section class="notes">
+      <h2>Your Quick Notes</h2>
+      <div class="note-controls">
+        <input id="note-input" placeholder="Write a quick note..." />
+        <button id="add-note">Add</button>
+      </div>
+      <ul id="notes-list"></ul>
+    </section>
+
+    <footer><small>Notes saved on server (data/notes.json). Simple demo for CI/CD.</small></footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

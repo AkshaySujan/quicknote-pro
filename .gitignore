@@ -1,0 +1,4 @@
+node_modules/
+.env
+# If you prefer not to commit user notes, uncomment:
+# data/notes.json
