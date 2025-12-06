@@ -71,6 +71,27 @@ app.delete('/api/notes/:id', async (req, res) => {
   }
 })
 
+// PUT /api/notes/:id -> edit note text
+app.put('/api/notes/:id', async (req, res) => {
+  const id = Number(req.params.id)
+  const { text } = req.body
+  if (!text || !text.trim()) return res.status(400).json({ error: 'Empty note' })
+  try {
+    const notes = await fs.readJson(NOTES_FILE)
+    let found = false
+    const updated = notes.map(n => {
+      if (n.id === id) { found = true; return { ...n, text: text.trim(), updatedAt: new Date().toISOString() } }
+      return n
+    })
+    if (!found) return res.status(404).json({ error: 'Note not found' })
+    await fs.writeJson(NOTES_FILE, updated, { spaces: 2 })
+    res.json({ success: true })
+  } catch (err) {
+    res.status(500).json({ error: 'Update failed' })
+  }
+})
+
+
 // Serve index.html for any other routes (SPA fallback)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'))

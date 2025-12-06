@@ -1,11 +1,33 @@
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f8fb;color:#111}
-.container{max-width:760px;margin:36px auto;background:#fff;padding:22px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
-h1{text-align:center;margin:0 0 12px}
+:root{
+  --bg:#f6f8fb; --card:#fff; --accent:#2563eb; --muted:#6b7280; --text:#111;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:transparent}
+.container{max-width:760px;margin:20px auto;background:var(--card);padding:22px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+h1{margin:0}
 .quote-box{text-align:center;margin-bottom:16px}
 #quote{font-size:1.05rem;padding:8px;color:#333}
-button{background:#2563eb;color:#fff;padding:8px 12px;border:0;border-radius:8px;cursor:pointer}
+button{background:var(--accent);color:#fff;padding:8px 12px;border:0;border-radius:8px;cursor:pointer}
+button.secondary{background:#fff;color:#111;border:1px solid #e6e9ee}
 .note-controls{display:flex;gap:8px;margin-bottom:12px}
 #note-input{flex:1;padding:8px;border-radius:8px;border:1px solid #ddd}
 #notes-list{list-style:none;padding:0;margin:0}
-.note{display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:8px;border:1px solid #eef2ff;margin-bottom:8px}
+.note{display:flex;align-items:flex-start;justify-content:space-between;padding:10px;border-radius:8px;border:1px solid #eef2ff;margin-bottom:8px;background:#fff}
+.note-left{flex:1}
+.note-text{font-size:0.98rem;margin-bottom:6px}
+.note-meta{font-size:0.78rem;color:var(--muted)}
+.note-actions{display:flex;gap:8px;align-items:center}
 .small-btn{background:#fff;color:#111;border:1px solid #e6e9ee;padding:6px 8px;border-radius:6px;cursor:pointer}
+
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.4)}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:var(--card);padding:18px;border-radius:10px;max-width:600px;width:90%}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+
+/* dark mode */
+body.dark{background:#0f1724;color:#e6eef8}
+body.dark .container{background:#071126}
+body.dark .note{background:#051226;border-color:#102338}
+body.dark button{background:#0ea5a4}
+body.dark button.secondary{background:#0b1220;color:#e6eef8;border-color:#122033}
