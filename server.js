@@ -21,11 +21,27 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Simple quotes array
 const quotes = [
   "Start small. Finish strong.",
-  "Progress > perfection.",
-  "Make today count.",
-  "Keep learning, keep building.",
-  "Small steps every day."
+  "One step at a time.",
+  "CI/CD makes development faster.",
+  "Consistency beats motivation.",
+  "Learn something new every day.",
+  "Small progress is still progress.",
+  "Discipline creates success.",
+  "Dream big. Work hard.",
+  "Code. Test. Deploy. Repeat.",
+  "Automation saves time.",
+  "Mistakes are stepping stones.",
+  "Focus on progress, not perfection.",
+  "Build first, improve later.",
+  "Practice makes mastery.",
+  "Simple solutions scale best.",
+  "Don’t fear failures, learn from them.",
+  "Every expert was once a beginner.",
+  "Solve problems, not just code.",
+  "Technology is best when it helps people.",
+  "CI/CD makes life easier 🚀"
 ]
+
 
 // GET /api/quote -> random quote
 app.get('/api/quote', (req, res) => {
