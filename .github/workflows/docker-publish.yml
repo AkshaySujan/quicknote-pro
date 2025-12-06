@@ -27,4 +27,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/quicknote-pro:latest
+          tags: akshaysujan/quicknote-pro:latest
+
