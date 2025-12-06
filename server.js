@@ -18,29 +18,29 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')))
 
-// Simple quotes array
 const quotes = [
-  "Start small. Finish strong.",
-  "One step at a time.",
-  "CI/CD makes development faster.",
-  "Consistency beats motivation.",
-  "Learn something new every day.",
-  "Small progress is still progress.",
-  "Discipline creates success.",
-  "Dream big. Work hard.",
-  "Code. Test. Deploy. Repeat.",
-  "Automation saves time.",
-  "Mistakes are stepping stones.",
-  "Focus on progress, not perfection.",
-  "Build first, improve later.",
-  "Practice makes mastery.",
-  "Simple solutions scale best.",
-  "Don’t fear failures, learn from them.",
+  "Small steps every day lead to big success.",
+  "Discipline beats motivation.",
+  "Consistency is the real superpower.",
+  "Dream big. Start today.",
+  "One push at a time.",
+  "Make progress, not excuses.",
+  "Hard work always pays off.",
+  "Focus on improvement, not perfection.",
+  "Code. Commit. Improve.",
+  "Learning never stops.",
+  "Believe in the process.",
   "Every expert was once a beginner.",
-  "Solve problems, not just code.",
-  "Technology is best when it helps people.",
-  "CI/CD makes life easier 🚀"
+  "Today’s effort is tomorrow’s success.",
+  "Build slowly, build strong.",
+  "Failure is part of learning.",
+  "Never stop experimenting.",
+  "Success loves consistency.",
+  "Turn ideas into reality.",
+  "Keep pushing forward.",
+  "CI/CD makes development faster 🚀"
 ]
+
 
 
 // GET /api/quote -> random quote
